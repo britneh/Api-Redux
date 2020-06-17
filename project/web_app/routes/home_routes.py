@@ -1,8 +1,8 @@
-from flask import Blueprint
+from flask import Blueprint, render_template
 
 home_routes = Blueprint("home_routes", __name__)
 
 
 @home_routes.route("/")
 def index():
-    return "You've accessed the index, hooray!"
+    return render_template("layout.html", title="BritTwit")
